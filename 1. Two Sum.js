@@ -9,7 +9,7 @@ var twoSum = function(nums, target) {
     
     for(let i = 0; i < nums.length; i++) {
         let diffNum = target - nums[i]
-        if(compareObj[diffNum]) {
+        if(compareObj[diffNum] && compareObj[diffNum] !== i) {
             return [compareObj[diffNum],i]
         }
     }
